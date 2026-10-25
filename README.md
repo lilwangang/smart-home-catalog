@@ -16,13 +16,13 @@ Ford/FordPass, Lincoln, OnStar, General Motors, Chevrolet, GMC, Cadillac and Bui
 
 - **956** entries from the pinned HACS default Dashboard category.
 - **18** independently researched frontend projects outside that default list.
-- Separate search, source filter, sorting, pagination and detail views.
+- Separate search, source filter, sorting and pagination. Entries open the original integration documentation or project page in a new browser tab; entries with multiple routes show a choice of links instead of a custom details popup.
 
 ## Open
 
 Use the GitHub Pages site for full browser functionality. Downloaded HTML attachment previews on phones may block JavaScript. `index.html` is also self-contained and works offline in a full browser. `.nojekyll` serves it directly without template processing.
 
-There are no business contact details, outbound links, analytics or third-party runtime dependencies in the catalog.
+There are no business contact details, analytics or third-party runtime dependencies in the catalog. Integration links open external documentation or source projects in a new tab. Multiple connection routes remain separate options; a documentation link is not an exact-model support claim.
 
 ## Scope and provenance
 
