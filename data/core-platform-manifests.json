@@ -1,0 +1,742 @@
+[
+  {
+    "id": "core:ai_task",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/ai_task/manifest.json",
+    "manifest": {
+      "domain": "ai_task",
+      "name": "AI Task",
+      "after_dependencies": [
+        "camera"
+      ],
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "conversation",
+        "media_source"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/ai_task",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:air_quality",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/air_quality/manifest.json",
+    "manifest": {
+      "domain": "air_quality",
+      "name": "Air quality",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/air_quality",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:alarm_control_panel",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/alarm_control_panel/manifest.json",
+    "manifest": {
+      "domain": "alarm_control_panel",
+      "name": "Alarm control panel",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/alarm_control_panel",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:assist_satellite",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/assist_satellite/manifest.json",
+    "manifest": {
+      "domain": "assist_satellite",
+      "name": "Assist Satellite",
+      "codeowners": [
+        "@home-assistant/core",
+        "@synesthesiam",
+        "@arturpragacz"
+      ],
+      "dependencies": [
+        "assist_pipeline",
+        "http",
+        "stt",
+        "tts"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/assist_satellite",
+      "integration_type": "entity",
+      "quality_scale": "internal",
+      "requirements": [
+        "hassil==3.12.1"
+      ]
+    }
+  },
+  {
+    "id": "core:binary_sensor",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/binary_sensor/manifest.json",
+    "manifest": {
+      "domain": "binary_sensor",
+      "name": "Binary sensor",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/binary_sensor",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:button",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/button/manifest.json",
+    "manifest": {
+      "domain": "button",
+      "name": "Button",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/button",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:calendar",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/calendar/manifest.json",
+    "manifest": {
+      "domain": "calendar",
+      "name": "Calendar",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/calendar",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:camera",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/camera/manifest.json",
+    "manifest": {
+      "domain": "camera",
+      "name": "Camera",
+      "after_dependencies": [
+        "media_player"
+      ],
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http",
+        "web_rtc"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/camera",
+      "integration_type": "entity",
+      "quality_scale": "internal",
+      "requirements": [
+        "PyTurboJPEG==1.8.3"
+      ]
+    }
+  },
+  {
+    "id": "core:climate",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/climate/manifest.json",
+    "manifest": {
+      "domain": "climate",
+      "name": "Climate",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/climate",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:conversation",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/conversation/manifest.json",
+    "manifest": {
+      "domain": "conversation",
+      "name": "Conversation",
+      "codeowners": [
+        "@home-assistant/core",
+        "@synesthesiam",
+        "@arturpragacz"
+      ],
+      "dependencies": [
+        "http",
+        "intent",
+        "llm"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/conversation",
+      "integration_type": "entity",
+      "quality_scale": "internal",
+      "requirements": [
+        "gazetteer-matcher==1.1.0",
+        "hassil==3.12.1",
+        "home-assistant-intents==2026.10.6"
+      ]
+    }
+  },
+  {
+    "id": "core:cover",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/cover/manifest.json",
+    "manifest": {
+      "domain": "cover",
+      "name": "Cover",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/cover",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:date",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/date/manifest.json",
+    "manifest": {
+      "domain": "date",
+      "name": "Date",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/date",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:datetime",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/datetime/manifest.json",
+    "manifest": {
+      "domain": "datetime",
+      "name": "Date/Time",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/datetime",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:device_tracker",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/device_tracker/manifest.json",
+    "manifest": {
+      "domain": "device_tracker",
+      "name": "Device tracker",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "zone"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/device_tracker",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:event",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/event/manifest.json",
+    "manifest": {
+      "domain": "event",
+      "name": "Event",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/event",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:fan",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/fan/manifest.json",
+    "manifest": {
+      "domain": "fan",
+      "name": "Fan",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/fan",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:geo_location",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/geo_location/manifest.json",
+    "manifest": {
+      "domain": "geo_location",
+      "name": "Geolocation",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/geo_location",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:humidifier",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/humidifier/manifest.json",
+    "manifest": {
+      "domain": "humidifier",
+      "name": "Humidifier",
+      "codeowners": [
+        "@home-assistant/core",
+        "@Shulyaka"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/humidifier",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:image",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/image/manifest.json",
+    "manifest": {
+      "domain": "image",
+      "name": "Image",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/image",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:image_processing",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/image_processing/manifest.json",
+    "manifest": {
+      "domain": "image_processing",
+      "name": "Image processing",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "camera"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/image_processing",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:infrared",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/infrared/manifest.json",
+    "manifest": {
+      "domain": "infrared",
+      "name": "Infrared",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/infrared",
+      "integration_type": "entity",
+      "quality_scale": "internal",
+      "requirements": [
+        "infrared-protocols==10.1.0"
+      ]
+    }
+  },
+  {
+    "id": "core:lawn_mower",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/lawn_mower/manifest.json",
+    "manifest": {
+      "domain": "lawn_mower",
+      "name": "Lawn mower",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/lawn_mower",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:light",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/light/manifest.json",
+    "manifest": {
+      "domain": "light",
+      "name": "Light",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/light",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:lock",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/lock/manifest.json",
+    "manifest": {
+      "domain": "lock",
+      "name": "Lock",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/lock",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:media_player",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/media_player/manifest.json",
+    "manifest": {
+      "domain": "media_player",
+      "name": "Media player",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/media_player",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:notify",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/notify/manifest.json",
+    "manifest": {
+      "domain": "notify",
+      "name": "Notifications",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "repairs"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/notify",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:number",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/number/manifest.json",
+    "manifest": {
+      "domain": "number",
+      "name": "Number",
+      "codeowners": [
+        "@home-assistant/core",
+        "@Shulyaka"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/number",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:radio_frequency",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/radio_frequency/manifest.json",
+    "manifest": {
+      "domain": "radio_frequency",
+      "name": "Radio frequency",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "websocket_api"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/radio_frequency",
+      "integration_type": "entity",
+      "quality_scale": "internal",
+      "requirements": [
+        "rf-protocols==4.3.0"
+      ]
+    }
+  },
+  {
+    "id": "core:remote",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/remote/manifest.json",
+    "manifest": {
+      "domain": "remote",
+      "name": "Remote",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/remote",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:scene",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/scene/manifest.json",
+    "manifest": {
+      "domain": "scene",
+      "name": "Scenes",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/scene",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:select",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/select/manifest.json",
+    "manifest": {
+      "domain": "select",
+      "name": "Select",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/select",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:sensor",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/sensor/manifest.json",
+    "manifest": {
+      "domain": "sensor",
+      "name": "Sensor",
+      "after_dependencies": [
+        "recorder"
+      ],
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/sensor",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:siren",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/siren/manifest.json",
+    "manifest": {
+      "domain": "siren",
+      "name": "Siren",
+      "codeowners": [
+        "@home-assistant/core",
+        "@raman325"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/siren",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:stt",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/stt/manifest.json",
+    "manifest": {
+      "domain": "stt",
+      "name": "Speech-to-text (STT)",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/stt",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:switch",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/switch/manifest.json",
+    "manifest": {
+      "domain": "switch",
+      "name": "Switch",
+      "after_dependencies": [
+        "switch_as_x"
+      ],
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/switch",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:tag",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/tag/manifest.json",
+    "manifest": {
+      "domain": "tag",
+      "name": "Tags",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/tag",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:text",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/text/manifest.json",
+    "manifest": {
+      "domain": "text",
+      "name": "Text",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/text",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:time",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/time/manifest.json",
+    "manifest": {
+      "domain": "time",
+      "name": "Time",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/time",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:todo",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/todo/manifest.json",
+    "manifest": {
+      "domain": "todo",
+      "name": "To-do list",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/todo",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:tts",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/tts/manifest.json",
+    "manifest": {
+      "domain": "tts",
+      "name": "Text-to-speech (TTS)",
+      "after_dependencies": [
+        "media_player"
+      ],
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "dependencies": [
+        "http",
+        "ffmpeg"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/tts",
+      "integration_type": "entity",
+      "loggers": [
+        "mutagen"
+      ],
+      "quality_scale": "internal",
+      "requirements": [
+        "mutagen==1.48.1"
+      ]
+    }
+  },
+  {
+    "id": "core:update",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/update/manifest.json",
+    "manifest": {
+      "domain": "update",
+      "name": "Update",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/update",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:vacuum",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/vacuum/manifest.json",
+    "manifest": {
+      "domain": "vacuum",
+      "name": "Vacuum",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/vacuum",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:valve",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/valve/manifest.json",
+    "manifest": {
+      "domain": "valve",
+      "name": "Valve",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/valve",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:wake_word",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/wake_word/manifest.json",
+    "manifest": {
+      "domain": "wake_word",
+      "name": "Wake-word detection",
+      "codeowners": [
+        "@home-assistant/core",
+        "@synesthesiam"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/wake_word",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:water_heater",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/water_heater/manifest.json",
+    "manifest": {
+      "domain": "water_heater",
+      "name": "Water heater",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/water_heater",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  },
+  {
+    "id": "core:weather",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/weather/manifest.json",
+    "manifest": {
+      "domain": "weather",
+      "name": "Weather",
+      "codeowners": [
+        "@home-assistant/core"
+      ],
+      "documentation": "https://www.home-assistant.io/integrations/weather",
+      "integration_type": "entity",
+      "quality_scale": "internal"
+    }
+  }
+]

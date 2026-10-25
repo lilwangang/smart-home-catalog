@@ -1,0 +1,1122 @@
+[
+  {
+    "record_id": "brand:eve",
+    "method_url": "https://www.home-assistant.io/integrations/eve/",
+    "connection_scope": "local",
+    "source_url": "https://www.home-assistant.io/integrations/eve/",
+    "evidence": "Eve Matter devices work locally and integrate seamlessly with the Matter integration. All connectivity is happening locally.",
+    "caveat": "Applies to documented Matter route; older Bluetooth/HomeKit models can require firmware upgrade, Apple hardware and a Thread border router."
+  },
+  {
+    "record_id": "brand:fireavert",
+    "method_url": "https://www.home-assistant.io/integrations/fireavert/",
+    "connection_scope": "local",
+    "source_url": "https://www.home-assistant.io/integrations/fireavert/",
+    "evidence": "FireAvert Z-Wave devices work locally; Z-Wave stick required.",
+    "caveat": "Z-Wave route only, not every product from this manufacturer."
+  },
+  {
+    "record_id": "brand:ratgdo",
+    "method_url": "https://ratgdo.github.io/esphome-ratgdo/",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/RATGDO/esphome-ratgdo/main/README.md",
+    "evidence": "A WiFi control board for garage door openers that works over your local network.",
+    "caveat": "ESPHome firmware route; exact board, opener and wiring compatibility still apply."
+  },
+  {
+    "record_id": "brand:sensereo",
+    "method_url": "https://www.home-assistant.io/integrations/sensereo/",
+    "connection_scope": "local",
+    "source_url": "https://www.home-assistant.io/integrations/sensereo/",
+    "evidence": "Sensereo Matter devices work locally. All connectivity is happening locally.",
+    "caveat": "Documented Matter devices only; Thread border router may be required."
+  },
+  {
+    "record_id": "brand:ultraloq",
+    "method_url": "https://works-with.home-assistant.io/devices.json",
+    "connection_scope": "local",
+    "source_url": "https://www.home-assistant.io/integrations/ultraloq/",
+    "evidence": "Ultraloq Z-Wave Series smart locks work locally; Z-Wave stick required.",
+    "caveat": "Z-Wave series route only; does not establish local support for Wi-Fi/cloud models."
+  },
+  {
+    "record_id": "brand:ultraloq",
+    "method_url": "https://github.com/home-assistant/core/tree/2026.10.4/homeassistant/components/ultraloq",
+    "connection_scope": "local",
+    "source_url": "https://www.home-assistant.io/integrations/ultraloq/",
+    "evidence": "Ultraloq Z-Wave Series smart locks work locally; pair them as Z-Wave devices.",
+    "caveat": "Virtual brand redirect to Z-Wave; not a standalone cloud API integration."
+  },
+  {
+    "record_id": "brand:zooz",
+    "method_url": "https://www.home-assistant.io/integrations/zooz/",
+    "connection_scope": "local",
+    "source_url": "https://www.home-assistant.io/integrations/zooz/",
+    "evidence": "Zooz Z-Wave devices work locally; Z-Wave stick required. All connectivity is happening locally.",
+    "caveat": "Documented Z-Wave route and models only."
+  },
+  {
+    "record_id": "core:api",
+    "method_url": "https://www.home-assistant.io/integrations/api",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/api/__init__.py",
+    "evidence": "Register the API with the HTTP interface; hass.http.register_view(APIStatusView), APIStatesView and other views expose endpoints on the user's own instance.",
+    "caveat": "Self-hosted HTTP API, not a vendor cloud dependency. Users may separately expose their instance remotely."
+  },
+  {
+    "record_id": "core:websocket_api",
+    "method_url": "https://www.home-assistant.io/integrations/websocket_api",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/home-assistant/core/2026.10.4/homeassistant/components/websocket_api/__init__.py",
+    "evidence": "Initialize the websocket API; hass.http.register_view(http.WebsocketAPIView()) registers the WebSocket endpoint on the user's own instance.",
+    "caveat": "Self-hosted API; remote access configuration is separate from this integration's connection location."
+  },
+  {
+    "repository": "thevoltagesource/lennoxicomfort",
+    "domain": "myicomfort",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/thevoltagesource/LennoxiComfort/HEAD/README.md",
+    "evidence": "Requirements: Thermostat linked to a myicomfort.com (Lennox) or mycomfortsync.com (AirEase) account. Username/password are described as Cloud service account credentials.",
+    "caveat": "Cloud location established from README separately; malformed manifest value Cloud Polling is preserved, not normalized."
+  },
+  {
+    "repository": "5high/konke",
+    "domain": "konke",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/5high/konke/HEAD/README.md",
+    "evidence": "(string)(Required)The host/IP address of the device.",
+    "quote_verified": true
+  },
+  {
+    "repository": "seckatie/ha-wyzeapi",
+    "domain": "wyze",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/seckatie/ha-wyzeapi/HEAD/custom_components/wyzeapi/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "caveat": "Requested domain wyze is absent at the checked manifest path; repository now uses wyzeapi. Also supports device-specific local/BLE control. Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "9a4gl/hass-centrometal-boiler",
+    "domain": "centrometal_boiler",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/9a4gl/hass-centrometal-boiler/HEAD/custom_components/centrometal_boiler/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_PUSH",
+    "quote_verified": true
+  },
+  {
+    "repository": "algirdasc/hass-floureon",
+    "domain": "floureon",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/algirdasc/hass-floureon/HEAD/README.md",
+    "evidence": "| host ***(required)*** | string  |         | IP or hostname of thermostat.                                                                           |",
+    "quote_verified": true
+  },
+  {
+    "repository": "andersonshatch/midea-ac-py",
+    "domain": "midea",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/andersonshatch/midea-ac-py/HEAD/README.md",
+    "evidence": "This is a library to allow communicating to a Midea AC via the Midea Cloud.",
+    "quote_verified": true
+  },
+  {
+    "repository": "anonym-tsk/homeassistant-climate-xiaomi-remote",
+    "domain": "xiaomi_remote",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/anonym-tsk/homeassistant-climate-xiaomi-remote/HEAD/README.md",
+    "evidence": "[Xiaomi IR Remote](https://www.home-assistant.io/components/remote.xiaomi_miio/) component need to be enabled and configured",
+    "caveat": "Delegates to configured remote service; this wrapper does not establish endpoint scope."
+  },
+  {
+    "repository": "asev/homeassistant-helios",
+    "domain": "helios",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/asev/homeassistant-helios/HEAD/README.md",
+    "evidence": "1. Make sure your Helios has been connected to local network, and you know it's IP address.",
+    "quote_verified": true
+  },
+  {
+    "repository": "bacco007/sensor.waternsw",
+    "domain": "waternsw",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/bacco007/sensor.waternsw/HEAD/README.md",
+    "evidence": "1. Open [https://realtimedata.waternsw.com.au/](https://realtimedata.waternsw.com.au/)",
+    "quote_verified": true
+  },
+  {
+    "repository": "bertbert72/homeassistant_virgintivo",
+    "domain": "virgintivo",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/bertbert72/homeassistant_virgintivo/HEAD/README.md",
+    "evidence": "| host _(req)_ | | IP or name of Tivo box | TIVO-C68000012345678 |",
+    "caveat": "Optional internet channel-list scraping also exists.",
+    "quote_verified": true
+  },
+  {
+    "repository": "bramkragten/mind",
+    "domain": "mind",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/bramkragten/mind/HEAD/custom_components/mind/__init__.py",
+    "evidence": "Support for Mind Mobility connected cars.",
+    "caveat": "Dependency handles transport; inspected integration does not expose endpoint."
+  },
+  {
+    "repository": "bremor/public_transport_victoria",
+    "domain": "public_transport_victoria",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/bremor/public_transport_victoria/HEAD/custom_components/public_transport_victoria/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "quote_verified": true
+  },
+  {
+    "repository": "bytenik/ha-scoped-assist",
+    "domain": "scoped_assist",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/bytenik/ha-scoped-assist/HEAD/__init__.py",
+    "evidence": "\"\"\"Register the scoped API so it can be picked per conversation agent.\"\"\"",
+    "caveat": "In-process Assist tooling; configured conversation agent may separately use cloud services. Requested custom_components manifest path was unavailable. Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "custom-components/gpodder",
+    "domain": "gpodder",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/custom-components/gpodder/HEAD/custom_components/gpodder/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "caveat": "gpodder.net service is documented; no arbitrary self-host endpoint demonstrated by selected evidence.",
+    "quote_verified": true
+  },
+  {
+    "repository": "custom-components/sensor.avfallsor",
+    "domain": "avfallsor",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.avfallsor/HEAD/custom_components/avfallsor/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "quote_verified": true
+  },
+  {
+    "repository": "custom-components/sensor.personalcapital",
+    "domain": "personalcapital",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.personalcapital/HEAD/custom_components/personalcapital/sensor.py",
+    "evidence": "pc.login(config.get(CONF_EMAIL), config.get(CONF_PASSWORD))",
+    "caveat": "Account login alone does not establish transport endpoint; dependency endpoint not inspected."
+  },
+  {
+    "repository": "custom-components/sensor.stadtreinigung_hamburg",
+    "domain": "stadtreinigung_hamburg",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.stadtreinigung_hamburg/HEAD/custom_components/hass_stadtreinigung_hamburg/__init__.py",
+    "evidence": "from stadtreinigung_hamburg.StadtreinigungHamburg import StadtreinigungHamburg",
+    "caveat": "Requested domain path unavailable; implementation uses hass_stadtreinigung_hamburg and delegates network transport to dependency."
+  },
+  {
+    "repository": "custom-components/sensor.unifigateway",
+    "domain": "unifigateway",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.unifigateway/HEAD/custom_components/unifigateway/sensor.py",
+    "evidence": "DEFAULT_HOST = 'localhost'",
+    "caveat": "Default only, not runtime-tested; controller host is configurable and could be remote.",
+    "quote_verified": true
+  },
+  {
+    "repository": "cyberjunky/home-assistant-ttn_gateway",
+    "domain": "ttn_gateway",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/cyberjunky/home-assistant-ttn_gateway/HEAD/README.md",
+    "evidence": "- **host** (*Required*): The IP address of the gateway you want to monitor.",
+    "quote_verified": true
+  },
+  {
+    "repository": "danobot/entity-controller",
+    "domain": "entity_controller",
+    "connection_scope": "virtual",
+    "source_url": "https://raw.githubusercontent.com/danobot/entity-controller/HEAD/README.md",
+    "evidence": "EC is available in HACS store. Once installed, add the the following to your `configuration.yaml`, replacing the values for `sensor` and `entity` with one of your own. Reboot your Home Assistant server and you should have a motion controlled light that turns off after 5 seconds.",
+    "caveat": "In-process entity automation; controlled entities may have their own local/cloud transports.",
+    "quote_verified": true
+  },
+  {
+    "repository": "djbulsink/panasonic_ac",
+    "domain": "panasonic_ac",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/djbulsink/panasonic_ac/HEAD/README.md",
+    "evidence": "# Panasonic Comfort Cloud HA component",
+    "quote_verified": true
+  },
+  {
+    "repository": "djtimca/hasatellitetracker",
+    "domain": "satellitetracker",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/djtimca/hasatellitetracker/HEAD/custom_components/satellitetracker/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "quote_verified": true
+  },
+  {
+    "repository": "dmoranf/home-assistant-wattio",
+    "domain": "wattio",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/dmoranf/home-assistant-wattio/HEAD/custom_components/wattio/const.py",
+    "evidence": "WATTIO_STATUS_URI = \"https://api.wattio.com/public/v1/appliances/status\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "ec-blaster/magicswitchbot-homeassistant",
+    "domain": "magicswitchbot",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/ec-blaster/magicswitchbot-homeassistant/HEAD/README.md",
+    "evidence": "This component is based on a `bleak` library to communicate with the devices via BLE (Bluetooth Low Energy), so theoretically it should work on Linux, Windows or Mac.",
+    "quote_verified": true
+  },
+  {
+    "repository": "eyalcha/kan_program",
+    "domain": "kan_program",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/eyalcha/kan_program/HEAD/custom_components/kan_program/const.py",
+    "evidence": "BASE_URL_GUIDE = \"https://www.kan.org.il/tv-guide/tv_guidePrograms.ashx\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "filipvh/hass-nhc2",
+    "domain": "nhc2",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/filipvh/hass-nhc2/HEAD/README.md",
+    "evidence": "This integration communicates directly with the controller. You only need internet when activating/renewing the Hobby API. If you use a touch screen profile, this isn't even needed.",
+    "caveat": "Internet may be needed to activate/renew Hobby API credentials.",
+    "quote_verified": true
+  },
+  {
+    "repository": "fineemb/xiaomi-smart-multipurpose-kettle",
+    "domain": "health_pot",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/fineemb/xiaomi-smart-multipurpose-kettle/HEAD/README.md",
+    "evidence": "- **host** (*Required*): The IP of your cooker.",
+    "quote_verified": true
+  },
+  {
+    "repository": "freol35241/ltss",
+    "domain": "ltss",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/freol35241/ltss/HEAD/README.md",
+    "evidence": "db_url: postgresql://USER:PASSWORD@HOST_ADRESS/DB_NAME",
+    "caveat": "Configurable PostgreSQL endpoint; self-hosted does not establish local versus cloud route."
+  },
+  {
+    "repository": "garbled1/homeassistant_ecowitt",
+    "domain": "ecowitt",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/garbled1/homeassistant_ecowitt/HEAD/README.md",
+    "evidence": "1. Pick the protocol Ecowitt, and put in the ip/hostname of your hass server.",
+    "quote_verified": true
+  },
+  {
+    "repository": "gensyn/ssh_command",
+    "domain": "ssh_command",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/gensyn/ssh_command/HEAD/README.md",
+    "evidence": "- `host` (required) — Hostname or IP address of the remote server",
+    "caveat": "Configurable SSH server; route can be LAN or internet."
+  },
+  {
+    "repository": "gensyn/task_tracker",
+    "domain": "task_tracker",
+    "connection_scope": "virtual",
+    "source_url": "https://raw.githubusercontent.com/gensyn/task_tracker/HEAD/README.md",
+    "evidence": "Task Tracker seamlessly integrates with Home Assistant's Local Todo lists:",
+    "caveat": "Internal task scheduling and local todo integration; no independent device/vendor transport established.",
+    "quote_verified": true
+  },
+  {
+    "repository": "hellowlol/ha-tide",
+    "domain": "tide",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/hellowlol/ha-tide/HEAD/custom_components/tide/sensor.py",
+    "evidence": "f\"http://api.sehavniva.no/tideapi.php?lat={lat}&lon={lon}&fromtime={time_from_str}\"",
+    "caveat": "Actual internet endpoint overrides misleading LOCAL_PUSH flow label.",
+    "quote_verified": true
+  },
+  {
+    "repository": "iatkachenko/ha-sleepasandroid",
+    "domain": "sleep_as_android",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/iatkachenko/ha-sleepasandroid/HEAD/README.md",
+    "evidence": "* `URL` is a URL for your MQTT server. It should look like `tcp://mqtt_user:mqtt_password@mqtt_host:mqtt_port`",
+    "caveat": "Configurable MQTT broker; app-to-broker route may be local or internet."
+  },
+  {
+    "repository": "iprak/yahoofinance",
+    "domain": "yahoofinance",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/iprak/yahoofinance/HEAD/custom_components/yahoofinance/const.py",
+    "evidence": "BASE: Final = \"https://query1.finance.yahoo.com/v7/finance/quote?symbols=\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "jaruba/ha-samsungtv-tizen",
+    "domain": "samsungtv_tizen",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/jaruba/ha-samsungtv-tizen/HEAD/README.md",
+    "evidence": "host: IP_ADDRESS",
+    "caveat": "TV device endpoint; optional SmartThings Cloud API adds cloud-dependent features.",
+    "quote_verified": true
+  },
+  {
+    "repository": "jonasped/homeassistant-eloverblik",
+    "domain": "eloverblik",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/jonasped/homeassistant-eloverblik/HEAD/custom_components/eloverblik/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "quote_verified": true
+  },
+  {
+    "repository": "jurajnyiri/homeassistant-atrea",
+    "domain": "atrea",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/jurajnyiri/homeassistant-atrea/HEAD/custom_components/atrea/config_flow.py",
+    "evidence": "\"[ADD DEVICE][%s:%d] Verifying IP address being atrea unit\",",
+    "quote_verified": true
+  },
+  {
+    "repository": "jurajnyiri/homeassistant-tapo-control",
+    "domain": "tapo_control",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/jurajnyiri/homeassistant-tapo-control/HEAD/README.md",
+    "evidence": "2. If you have used up [all your RTSP streams](https://www.tp-link.com/cz/support/faq/2742/) and/or your RTSP streams are unstable in Home Assistant.",
+    "caveat": "Camera-device transport; cloud-account credentials do not by themselves imply cloud routing. Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "jxlarrea/ha-emfitqs",
+    "domain": "emfitqs",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/jxlarrea/ha-emfitqs/HEAD/README.md",
+    "evidence": "**IMPORTANT:** Your Emfit QS device must be accessible by Home Assistant on your local area network.",
+    "quote_verified": true
+  },
+  {
+    "repository": "kclif9/hassactronneo",
+    "domain": "actronair_neo",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/kclif9/hassactronneo/HEAD/README.md",
+    "evidence": "- **Cloud Dependency**: The integration relies on the Actron Air cloud service, so internet connectivity is required for operation.",
+    "quote_verified": true
+  },
+  {
+    "repository": "kodi1/darksky_m",
+    "domain": "darksky_m",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/kodi1/darksky_m/HEAD/README.md",
+    "evidence": "api_key: !secret darksky_key",
+    "caveat": "API key alone is insufficient; transport endpoint not established in inspected source."
+  },
+  {
+    "repository": "kodi1/songpal_m",
+    "domain": "songpal_m",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/kodi1/songpal_m/HEAD/README.md",
+    "evidence": "endpoint: http://<host_or_ip>:10000/sony",
+    "caveat": "Sony device endpoint is configurable; default/example not runtime-tested.",
+    "quote_verified": true
+  },
+  {
+    "repository": "koljawindeler/ics",
+    "domain": "ics",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/koljawindeler/ics/HEAD/README.md",
+    "evidence": "- Supports ICS file (local and online) with reoccuring events",
+    "caveat": "Configurable local file or internet ICS URL; no single deployment scope."
+  },
+  {
+    "repository": "limych/ha-apparent-temperature",
+    "domain": "temperature_feels_like",
+    "connection_scope": "virtual",
+    "source_url": "https://raw.githubusercontent.com/limych/ha-apparent-temperature/HEAD/README.md",
+    "evidence": "For calculations sensor uses temperature, humidity and wind speed values. Temperature and humidity values is required. Wind speed value is optional.\\",
+    "caveat": "Upstream source entities can have independent local/cloud transports.",
+    "quote_verified": true
+  },
+  {
+    "repository": "lolouk44/currentcost_ha_cc",
+    "domain": "currentcost",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/lolouk44/currentcost_ha_cc/HEAD/README.md",
+    "evidence": "The `currentcost` sensor platform is using the data provided by a [CurrentCost](http://www.currentcost.com/) device connected to the serial port via a [data cable](http://www.currentcost.com/product-datacable.html).",
+    "quote_verified": true
+  },
+  {
+    "repository": "martinvdm/garbage-nissewaard-homeassistant",
+    "domain": "nissewaard",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/martinvdm/garbage-nissewaard-homeassistant/HEAD/custom_components/nissewaard/sensor.py",
+    "evidence": "DEFAULT_BASEURL = 'https://wasteapi.2go-mobile.com/api/{}'",
+    "quote_verified": true
+  },
+  {
+    "repository": "muxa/home-assistant-niwa-tides",
+    "domain": "niwa_tides",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/muxa/home-assistant-niwa-tides/HEAD/custom_components/niwa_tides/sensor.py",
+    "evidence": "\"https://api.niwa.co.nz/tides/data?lat={}&long={}&numberOfDays=2&startDate={}\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "neohuncho/vikunja-voice-assistant",
+    "domain": "vikunja",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/neohuncho/vikunja-voice-assistant/HEAD/README.md",
+    "evidence": "5. Fill out setup form (Vikunja URL, API token, AI Task entity, options)",
+    "caveat": "Configurable Vikunja server URL; self-hosting does not establish LAN versus internet. AI Task entity has separate transport."
+  },
+  {
+    "repository": "nicole-ashley/homeassistant-goldair-climate",
+    "domain": "goldair_climate",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/nicole-ashley/homeassistant-goldair-climate/HEAD/README.md",
+    "evidence": "limate` component integrates [Goldair WiFi-enabled heaters](http://www.goldair.co.nz/product-catalogue/heating/wifi-heaters), [WiFi-enabled dehumidifiers](http://www.goldair.co.nz/product-catalogue/heating/dehumidifiers), and [WiFi-enabled fans](http://www.goldair.co.nz/product-c",
+    "caveat": "Wi-Fi alone does not establish local control; endpoint evidence insufficient."
+  },
+  {
+    "repository": "paul-dh/home-assisant-sensor-ovapi",
+    "domain": "ovapi",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/paul-dh/home-assisant-sensor-ovapi/HEAD/README.md",
+    "evidence": "### To find the stop_code (stopareacode) refer to the JSON response of: [v0.ovapi.nl](http://v0.ovapi.nl/stopareacode)",
+    "quote_verified": true
+  },
+  {
+    "repository": "pippyn/home-assistant-sensor-afvalbeheer",
+    "domain": "afvalbeheer",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/pippyn/home-assistant-sensor-afvalbeheer/HEAD/custom_components/afvalbeheer/const.py",
+    "evidence": "'alphenaandenrijn':             'https://afvalkalender.alphenaandenrijn.nl',",
+    "quote_verified": true
+  },
+  {
+    "repository": "postlund/dlink_hnap",
+    "domain": "dlink_hnap",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/postlund/dlink_hnap/HEAD/README.md",
+    "evidence": "locally with the devices, i.e. no cloud needed, but only supports polling.",
+    "quote_verified": true
+  },
+  {
+    "repository": "rdehuyss/homeassistant-custom_components-denkovi",
+    "domain": "denkovi",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/rdehuyss/homeassistant-custom_components-denkovi/HEAD/README.md",
+    "evidence": "resource: http://192.168.1.200",
+    "quote_verified": true
+  },
+  {
+    "repository": "robhofmann/homeassistant-greeclimatecomponent",
+    "domain": "gree",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/robhofmann/homeassistant-greeclimatecomponent/HEAD/README.md",
+    "evidence": "This integration connects directly to your HVAC devices via their IP address on the local network, unlike the official mobile app, which establish a direct connection only during initial setup and subsequently operate through Gree’s servers.",
+    "quote_verified": true
+  },
+  {
+    "repository": "robmarkcole/hass-machinebox-classificationbox",
+    "domain": "classificationbox",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/robmarkcole/hass-machinebox-classificationbox/HEAD/README.md",
+    "evidence": "ip_address: localhost",
+    "caveat": "Documented example targets local Docker instance; configurable arbitrary server can be remote, not runtime-tested.",
+    "quote_verified": true
+  },
+  {
+    "repository": "sermayoral/ha-samsungtv-encrypted",
+    "domain": "samsungtv_encrypted",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/sermayoral/ha-samsungtv-encrypted/HEAD/README.md",
+    "evidence": "host: IP_ADDRESS",
+    "caveat": "TV endpoint with documented port 8080; not inferred from other Samsung repositories.",
+    "quote_verified": true
+  },
+  {
+    "repository": "slesinger/homeassistant-bmr",
+    "domain": "bmr_hc64",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/slesinger/homeassistant-bmr/HEAD/README.md",
+    "evidence": "base_url: \"http://192.168.3.254/\"",
+    "caveat": "Documented device LAN example; URL configurable, not runtime-tested.",
+    "quote_verified": true
+  },
+  {
+    "repository": "slg/home-assistant-whatpulse",
+    "domain": "whatpulse",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/slg/home-assistant-whatpulse/HEAD/README.md",
+    "evidence": "- `public`: WhatPulse cloud API (requires `api_token` + `username` or `userid`)",
+    "caveat": "Multiple modes: public cloud, local client API, or both; client API defaults to localhost:3490. Classification represents public mode, not every configuration. Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "swartjean/ha-seedboxes-cc",
+    "domain": "seedboxes_cc",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/swartjean/ha-seedboxes-cc/HEAD/custom_components/seedboxes_cc/config_flow.py",
+    "evidence": "CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL",
+    "quote_verified": true
+  },
+  {
+    "repository": "tefinger/hass-brematic",
+    "domain": "brematic",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/tefinger/hass-brematic/HEAD/README.md",
+    "evidence": "- **host**<br />&nbsp;&nbsp;*(string) (Required)* Ip address or hostname of the gateway",
+    "quote_verified": true
+  },
+  {
+    "repository": "thomasloven/hass-lovelace_gen",
+    "domain": "lovelace_gen",
+    "connection_scope": "virtual",
+    "source_url": "https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/HEAD/README.md",
+    "evidence": "This integration changes the way Home Assistant parses your `ui_lovelace.yaml` before sending the information off to the lovelace frontend in your browser. It's obviously only useful if you are using [YAML mode](https://www.home-assistant.io/lovelace/yaml-mode/).",
+    "caveat": "In-process YAML/Jinja preprocessing; generated frontend resources may separately use internet URLs.",
+    "quote_verified": true
+  },
+  {
+    "repository": "tinohox/iona-ha",
+    "domain": "iona",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/tinohox/iona-ha/HEAD/README.md",
+    "evidence": "| **iONA Box IP** | Lokale IP-Adresse der iONA Box | `192.168.1.100` |",
+    "caveat": "Hybrid: enviaM Web API fallback and cloud power fallback; local box path not sole transport. Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "tuxuser/abfallapi_jumomind_ha",
+    "domain": "abfallapi_jumomind",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/tuxuser/abfallapi_jumomind_ha/HEAD/README.md",
+    "evidence": "`GET https://<ENDPOINT>.jumomind.com/mmapp/api.php?r=trash&city_id=<city_id>&area_id=<area_id>`",
+    "quote_verified": true
+  },
+  {
+    "repository": "vakio-ru/vakio_base_smart",
+    "domain": "vakio_base_smart",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/vakio-ru/vakio_base_smart/HEAD/README.md",
+    "evidence": "Имя сервера MQTT: 192.168.0.10",
+    "caveat": "Documented LAN broker example; MQTT host configurable, remote broker route also possible.",
+    "quote_verified": true
+  },
+  {
+    "repository": "wlcrs/huawei_solar",
+    "domain": "huawei_solar",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/wlcrs/huawei_solar/HEAD/README.md",
+    "evidence": "5. Enter the IP address and port on which the Modbus-TCP interface is available. Some pointers:",
+    "caveat": "Device Modbus transport; inverter separately sending data to FusionSolar is not integration cloud transport.",
+    "quote_verified": true
+  },
+  {
+    "repository": "mash2k3/qingping_cgs1",
+    "domain": "qingping",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/mash2k3/qingping_cgs1/HEAD/README.md",
+    "evidence": "The integration uses MQTT to discover Qingping devices on your network.",
+    "quote_verified": true
+  },
+  {
+    "repository": "5high/phicomm-dc1-homeassistant",
+    "domain": "phicomm_dc1",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/5high/phicomm-dc1-homeassistant/HEAD/custom_components/phicomm_dc1_switch/switch.py",
+    "evidence": "dc1sock.bind((\"0.0.0.0\", 8000))",
+    "quote_verified": true
+  },
+  {
+    "repository": "akasma74/hass-custom-alarm",
+    "domain": "bwalarm",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/akasma74/hass-custom-alarm/HEAD/custom_components/bwalarm/alarm_control_panel.py",
+    "evidence": "from homeassistant.helpers.event import async_track_state_change",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "amaximus/fkf-garbage-collection",
+    "domain": "fkf_garbage_collection",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/amaximus/fkf-garbage-collection/HEAD/custom_components/fkf-garbage-collection/const.py",
+    "evidence": "URL = \"mohubudapest.hu\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "andvikt/mega_hacs",
+    "domain": "mega",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/andvikt/mega_hacs/HEAD/custom_components/mega/hub.py",
+    "evidence": "http://{self.host}/{self.sec}/?cf=2",
+    "quote_verified": true
+  },
+  {
+    "repository": "asantaga/lightwaverf_ha_energysensor",
+    "domain": "lightwaverf_energy",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/asantaga/lightwaverf_ha_energysensor/HEAD/custom_components/lightwaverf_energy/sensor.py",
+    "evidence": "\"\"\"Shared UDP listener and cache for Lightwave energy data.\"\"\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "atymic/project_three_zero_ha",
+    "domain": "project_zero_three",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/atymic/project_three_zero_ha/HEAD/custom_components/project_zero_three/sensor.py",
+    "evidence": "https://projectzerothree.info/api.php?format=json",
+    "quote_verified": true
+  },
+  {
+    "repository": "barban-dev/homeassistant-midea-dehumidifier",
+    "domain": "midea_dehumidifier",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/barban-dev/homeassistant-midea-dehumidifier/HEAD/README.md",
+    "evidence": "This custom component is based on python library",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "binsentsu/home-assistant-solaredge-modbus",
+    "domain": "solaredge_modbus",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/binsentsu/home-assistant-solaredge-modbus/HEAD/README.md",
+    "evidence": "Home assistant Custom Component for reading data from Solaredge inverter through modbus TCP.",
+    "quote_verified": true
+  },
+  {
+    "repository": "bremor/bureau_of_meteorology",
+    "domain": "bureau_of_meteorology",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/bremor/bureau_of_meteorology/HEAD/custom_components/bureau_of_meteorology/PyBoM/const.py",
+    "evidence": "https://api.weather.bom.gov.au/v1/locations/",
+    "quote_verified": true
+  },
+  {
+    "repository": "brunas/meteo_lt_by_brunas",
+    "domain": "meteo_lt",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/brunas/meteo_lt_by_brunas/HEAD/README.md",
+    "evidence": "This integration adds support for retrieving the Forecast and Hydro data from [Api.Meteo.Lt](https://api.meteo.lt) and setting up following platforms in Home Assistant:",
+    "quote_verified": true
+  },
+  {
+    "repository": "cagnulein/switchbot_press",
+    "domain": "switchbot_press",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/cagnulein/switchbot_press/HEAD/custom_components/switchbot_press/switch.py",
+    "evidence": "vol.Required(CONF_MAC): cv.string",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "custom-components/sensor.airthings_wave",
+    "domain": "airthings_wave",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.airthings_wave/HEAD/README.md",
+    "evidence": "This component is cloudless and accomplishes this by communicating over bluetooth instead of using Airthings' cloud API.",
+    "quote_verified": true
+  },
+  {
+    "repository": "custom-components/sensor.owlintuition",
+    "domain": "owlintuition",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.owlintuition/HEAD/README.md",
+    "evidence": "OWL is effectively sending out UDP updates to the configured port",
+    "quote_verified": true
+  },
+  {
+    "repository": "custom-components/sensor.ssh",
+    "domain": "ssh",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.ssh/HEAD/README.md",
+    "evidence": "Login to a remote server via ssh, execute a command and retrieve the result as sensor value",
+    "caveat": "User-configured SSH target can be LAN or internet; scope unspecified."
+  },
+  {
+    "repository": "custom-components/sensor.trakt",
+    "domain": "trakt",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/custom-components/sensor.trakt/HEAD/custom_components/trakt/const.py",
+    "evidence": "https://api.trakt.tv/oauth/token",
+    "quote_verified": true
+  },
+  {
+    "repository": "cyberjunky/home-assistant-p2000",
+    "domain": "p2000",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/cyberjunky/home-assistant-p2000/HEAD/custom_components/p2000/sensor.py",
+    "evidence": "http://p2000.brandweer-berkel-enschot.nl/homeassistant/rss.asp",
+    "quote_verified": true
+  },
+  {
+    "repository": "danielhiversen/home_assistant_adax",
+    "domain": "adax",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/danielhiversen/home_assistant_adax/HEAD/README.md",
+    "evidence": "Remote user client API",
+    "quote_verified": true
+  },
+  {
+    "repository": "dimagoltsman/ha-proof-dashcam-integration",
+    "domain": "proof",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/dimagoltsman/ha-proof-dashcam-integration/HEAD/custom_components/proof/__init__.py",
+    "evidence": "https://sm3.2proof.co.il/api/device",
+    "quote_verified": true
+  },
+  {
+    "repository": "djtimca/harocketlaunchlive",
+    "domain": "rocketlaunchlive",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/djtimca/harocketlaunchlive/HEAD/README.md",
+    "evidence": "enter your paid API key from https://rocketlaunch.live",
+    "quote_verified": true
+  },
+  {
+    "repository": "dlashua/templatebinarysensor",
+    "domain": "templatebinarysensor",
+    "connection_scope": "virtual",
+    "source_url": "https://raw.githubusercontent.com/dlashua/templatebinarysensor/HEAD/README.md",
+    "evidence": "Add template binary_sensors from the UI.",
+    "quote_verified": true
+  },
+  {
+    "repository": "dorsch95/ha-eta-webservices",
+    "domain": "eta_webservices",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/dorsch95/ha-eta-webservices/HEAD/README.md",
+    "evidence": "Nothing goes to the internet.",
+    "quote_verified": true
+  },
+  {
+    "repository": "exkajfash/media_player.elkoep_lara",
+    "domain": "elkoep_lara",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/exkajfash/media_player.elkoep_lara/HEAD/README.md",
+    "evidence": "host: 192.168.1.2",
+    "quote_verified": true
+  },
+  {
+    "repository": "eyalcha/read_your_meter",
+    "domain": "read_your_meter",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/eyalcha/read_your_meter/HEAD/custom_components/read_your_meter/const.py",
+    "evidence": "DEFAULT_HOST = \"http://localhost:4444\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "fineemb/smartmi-smart-heater",
+    "domain": "miheater",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/fineemb/smartmi-smart-heater/HEAD/custom_components/miheater/climate.py",
+    "evidence": "Support for Xiaomi wifi-enabled home heaters via miio.",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "freakshock88/hass-populartimes",
+    "domain": "populartimes",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/freakshock88/hass-populartimes/HEAD/custom_components/populartimes/sensor.py",
+    "evidence": "Get the latest data from Google Places API.",
+    "quote_verified": true
+  },
+  {
+    "repository": "gadgetchnnel/entities_calendar",
+    "domain": "entities_calendar",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/gadgetchnnel/entities_calendar/HEAD/custom_components/entities_calendar/calendar.py",
+    "evidence": "state_object = self._hass.states.get(entity[CONF_ENTITY])",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "gcorgnet/sensor.emby_upcoming_media",
+    "domain": "emby_upcoming_media",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/gcorgnet/sensor.emby_upcoming_media/HEAD/README.md",
+    "evidence": "| host | localhost | no | The host Emby is running on.",
+    "quote_verified": true
+  },
+  {
+    "repository": "gensyn/ssh_docker",
+    "domain": "ssh_docker",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/gensyn/ssh_docker/HEAD/coordinator.py",
+    "evidence": "asyncssh returns None",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "georgesg/ha-slack-user",
+    "domain": "slack_user",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/georgesg/ha-slack-user/HEAD/README.md",
+    "evidence": "The component requires a Slack Member ID (User ID), and API Token.",
+    "quote_verified": true
+  },
+  {
+    "repository": "herikw/home-assistant-custom-components",
+    "domain": "atagone",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/herikw/home-assistant-custom-components/HEAD/custom_components/atagone/wrapper/atagoneapi.py",
+    "evidence": "BASE_URL = \"http://{0}:{1}{2}\"",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "iluvdata/liebherr",
+    "domain": "liebherr",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/iluvdata/liebherr/HEAD/README.md",
+    "evidence": "Uses Server-Sent Events to receive updates (Cloud Push)",
+    "quote_verified": true
+  },
+  {
+    "repository": "jaalperin/hass-bardolph",
+    "domain": "bardolph",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/jaalperin/hass-bardolph/HEAD/README.md",
+    "evidence": "simple scripting utility for LIFX light bulbs",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "jihao/rokid-webhook-hass",
+    "domain": "rokid_webhook",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/jihao/rokid-webhook-hass/HEAD/custom_components/rokid_webhook/__init__.py",
+    "evidence": "https://homebase.rokid.com/trigger/with/{}",
+    "quote_verified": true
+  },
+  {
+    "repository": "juanma7ag/wger-ha-integration",
+    "domain": "wger",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/juanma7ag/wger-ha-integration/HEAD/README.md",
+    "evidence": "A wger account on [wger.de](https://wger.de/) or a self-hosted wger server that Home Assistant can reach.",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "jurajnyiri/homeassistant-qbittorrentalternativespeed",
+    "domain": "qbittorrent_alternative_speed",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/jurajnyiri/homeassistant-qbittorrentalternativespeed/HEAD/README.md",
+    "evidence": "host: [Mandatory: IP address to qbittorrent]",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "jurajnyiri/homeassistant-tavos",
+    "domain": "tavos_water_outage",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/jurajnyiri/homeassistant-tavos/HEAD/README.md",
+    "evidence": "Processes water outages from Tavos and provides them inside Home Assistant",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "kalanda/homeassistant-aemet-sensor",
+    "domain": "aemet",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/kalanda/homeassistant-aemet-sensor/HEAD/custom_components/aemet/AemetApi/__init__.py",
+    "evidence": "https://opendata.aemet.es/opendata/api",
+    "quote_verified": true
+  },
+  {
+    "repository": "kevinhaendel/ha-ubee",
+    "domain": "ubee",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/kevinhaendel/ha-ubee/HEAD/README.md",
+    "evidence": "The IP address of your router, e.g., `192.168.1.1`.",
+    "quote_verified": true
+  },
+  {
+    "repository": "kodi1/esp_wd",
+    "domain": "esp_wd",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/kodi1/esp_wd/HEAD/custom_components/esp_wd/binary_sensor.py",
+    "evidence": "http://esp_easy_mega_url:esp_port/sysinfo",
+    "quote_verified": true
+  },
+  {
+    "repository": "kodi1/tvh_rec",
+    "domain": "tvh_rec",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/kodi1/tvh_rec/HEAD/custom_components/tvh_rec/sensor.py",
+    "evidence": "requests.post('%s/api/dvr/entry/grid_upcoming' % url",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "kuchel77/diskspace",
+    "domain": "diskspace",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/kuchel77/diskspace/HEAD/custom_components/diskspace/sensor.py",
+    "evidence": "total, used, free = shutil.disk_usage(self._path)",
+    "quote_verified": true
+  },
+  {
+    "repository": "lociii/homeassistant-csgo",
+    "domain": "csgo_gamestate",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/lociii/homeassistant-csgo/HEAD/README.md",
+    "evidence": "This integration [listens to game state changes]",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "martindybal/taphome-homeassistant",
+    "domain": "taphome",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/martindybal/taphome-homeassistant/HEAD/readme.md",
+    "evidence": "The integration runs locally, and status updates are immediate thanks to the TapHome webhook to Home Assistant.",
+    "quote_verified": true
+  },
+  {
+    "repository": "mofeywalker/openmensa-hass-component",
+    "domain": "openmensa",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/mofeywalker/openmensa-hass-component/HEAD/custom_components/openmensa/sensor.py",
+    "evidence": "from openmensa import OpenMensa as om",
+    "caveat": "Endpoint network scope not established by inspected source; API or helper name alone is insufficient."
+  },
+  {
+    "repository": "n-ia-hane/esphome-intercom",
+    "domain": "intercom_native",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/n-ia-hane/esphome-intercom/HEAD/README.md",
+    "evidence": "Turn ESPHome audio devices and Home Assistant into a local SIP phone system,",
+    "quote_verified": true
+  },
+  {
+    "repository": "nick2525/broadlink_s1c_s2c",
+    "domain": "broadlink_s1c",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/nick2525/broadlink_s1c_s2c/HEAD/README.md",
+    "evidence": "Your S1C Hub or S2C Hub needs to have a **Static IP Address** reserved by your router.",
+    "quote_verified": true
+  },
+  {
+    "repository": "nstrelow/ha_philips_android_tv",
+    "domain": "philips_android_tv",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/nstrelow/ha_philips_android_tv/HEAD/custom_components/philips_android_tv/media_player.py",
+    "evidence": "BASE_URL = 'https://{0}:1926/6/{1}'",
+    "quote_verified": true
+  },
+  {
+    "repository": "pc-supporting-gmbh/homeassistant-ghl",
+    "domain": "hacs_ghl",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/pc-supporting-gmbh/homeassistant-ghl/HEAD/custom_components/pcs_ghl/api.py",
+    "evidence": "asyncio.open_connection(self.host, self.port)",
+    "caveat": "Held for deeper review: selected evidence alone does not fully establish one location, exact domain, or all documented transport options."
+  },
+  {
+    "repository": "poeschl/remote-picotts",
+    "domain": "picotts_remote",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/poeschl/remote-picotts/HEAD/README.md",
+    "evidence": "Its recommended to run the server via my [Home Assistant Supervisor Addon]",
+    "quote_verified": true
+  },
+  {
+    "repository": "r-renato/ha-climacell-weather",
+    "domain": "climacell",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/r-renato/ha-climacell-weather/HEAD/custom_components/climacell/data_provider.py",
+    "evidence": "_HOSTNAME = \"data.climacell.co\"",
+    "quote_verified": true
+  },
+  {
+    "repository": "rob196/home-assistant-fxmarketapi",
+    "domain": "fxmarketapi",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/rob196/home-assistant-fxmarketapi/HEAD/custom_components/fxmarketapi/const.py",
+    "evidence": "https://fxmarketapi.com/apiconvert",
+    "quote_verified": true
+  },
+  {
+    "repository": "robmarkcole/hass-amazon-rekognition",
+    "domain": "amazon_rekognition",
+    "connection_scope": "cloud",
+    "source_url": "https://raw.githubusercontent.com/robmarkcole/hass-amazon-rekognition/HEAD/README.md",
+    "evidence": "Object detection with [Amazon Rekognition](https://aws.amazon.com/rekognition/).",
+    "quote_verified": true
+  },
+  {
+    "repository": "ruuvi-friends/ruuvi-hass.io",
+    "domain": "ruuvi",
+    "connection_scope": "local",
+    "source_url": "https://raw.githubusercontent.com/ruuvi-friends/ruuvi-hass.io/HEAD/README.md",
+    "evidence": "This project leverages python3 native bluetooth sockets.",
+    "quote_verified": true
+  },
+  {
+    "repository": "shogunxam/home-assistant-custom-components-cfr-toscana",
+    "domain": "cfr",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/shogunxam/Home-Assistant-custom-components-cfr-toscana/HEAD/custom_components/cfr/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "slesinger/homeassistant-predistribuce",
+    "domain": "predistribuce",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/slesinger/HomeAssistant-PREdistribuce/HEAD/custom_components/predistribuce/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "smiley73/ha-scheduler",
+    "domain": "scheduler",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/Smiley73/ha-scheduler/HEAD/custom_components/scheduler/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "tbclark3/ha-xweatherly",
+    "domain": "xweather",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/tbclark3/ha-xweatherly/HEAD/custom_components/xweather/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "thomasloven/hass-favicon",
+    "domain": "favicon",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/thomasloven/hass-favicon/HEAD/custom_components/favicon/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "tikismoke/home-assistant-plcbus",
+    "domain": "plcbus",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/tikismoke/home-assistant-plcbus/HEAD/custom_components/plcbus/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "traktore-org/sem-community",
+    "domain": "solar_energy_management",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/traktore-org/sem-community/HEAD/custom_components/solar_energy_management/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "tuxuser/abfallapi_regioit_ha",
+    "domain": "abfallapi_regioit",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/tuxuser/abfallapi_regioit_ha/HEAD/custom_components/abfallapi_regioit/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "vlumikero/home-assistant-securitas",
+    "domain": "securitas",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/vlumikero/home-assistant-securitas/HEAD/custom_components/securitas/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  },
+  {
+    "repository": "xilense/aimp_custom_component",
+    "domain": "aimp",
+    "connection_scope": "unknown",
+    "source_url": "https://raw.githubusercontent.com/xilense/aimp_custom_component/HEAD/custom_components/aimp/manifest.json",
+    "evidence": "No finalized endpoint evidence available.",
+    "caveat": "Unresolved; retained unknown at requested research cutoff."
+  }
+]

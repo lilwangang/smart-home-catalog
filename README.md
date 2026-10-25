@@ -34,6 +34,32 @@ Entries without reviewed exact-model device lists say so explicitly. Integration
 
 Project names and metadata remain attributable to their respective authors. No manufacturer or platform endorsement is claimed.
 
+## Connection labels and audit
+
+Connection labels describe the **documented route**, not a successful installation test or a manufacturer-wide compatibility promise:
+
+- **Local:** direct device/hub communication over LAN, Bluetooth or a documented local radio/bridge route. A local API is local; the word `API` alone does not establish cloud use.
+- **Cloud:** communication through a documented vendor-hosted internet endpoint or service.
+- **Local & cloud:** the entry contains separate documented options; not a promise that every feature works offline.
+- **Virtual / calculated:** calculations or internal helpers with no independent device-communication route.
+- **Platform / provider-dependent:** an abstract entity platform (such as sensor or light); location depends on the implementing integration.
+- **Connection type unverified:** insufficient evidence of location. It does **not** mean broken or incompatible. `assumed_state` describes limited state feedback, not local/cloud location.
+
+The additional audit checks exact repository/domain manifests rather than guessing from project names. `data/connection-manifests.json` records each attempted source URL, retrieval timestamp, downloaded content SHA-256, relevant manifest fields, and unavailable-source errors. These are repository declarations, not independent runtime tests; HEAD-based sources can change after retrieval. Unsupported or malformed class values are preserved in the evidence, not silently normalized.
+
+Gaps are researched individually in upstream documentation and code. `data/reviewed-connections.json` records the source and connection evidence, with route-specific caveats. Location may be documented without a known polling/push mechanism; in that case only location is assigned. `data/core-platform-manifests.json` retains pinned manifests for abstract entity platforms. The original core/HACS registry membership pins remain unchanged; newer repository connection evidence is an explicitly separate snapshot.
+
+Local communication can still require internet during initial setup, accounts, firmware downloads, or additional hardware. Optional cloud features and different firmware/model/region variants may differ. MQTT or self-hostable server software alone does not prove where a user's broker/server runs.
+
+Reapply checked-in evidence offline:
+
+```sh
+python3 scripts/audit_connections.py --apply
+python3 -m unittest discover -s tests -v
+```
+
+Running the audit script without `--apply` collects current candidate manifests into an ignored local JSONL cache; it does not silently replace the checked-in research. Python's standard library is sufficient for the audit; UI regression tests also require Node and execute the page's actual JavaScript.
+
 ## Publication
 
 GitHub Pages publishes the root of `main`. Updating `index.html` and pushing to `main` updates this separate catalog site. It is independent of any business website.
